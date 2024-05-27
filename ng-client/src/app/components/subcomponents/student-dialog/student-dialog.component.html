@@ -1,0 +1,46 @@
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="d-flex flex-column m-5">
+    <mat-form-field appearance="outline">
+      <mat-label>Id:</mat-label>
+      <input matInput id="id" formControlName="id">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="name">Name:</mat-label>
+      <input matInput id="name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="lastName">Last Name:</mat-label>
+      <input matInput id="lastName" formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="birthDate">Birth Date:</mat-label>
+      <input matInput id="birthDate" type="date" formControlName="birthDate">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="age">Age:</mat-label>
+      <input matInput id="age" type="number" formControlName="age">
+    </mat-form-field>
+    <!-- <div formArrayName="addresses">
+      <div *ngFor="let address of addresses.controls; let i = index" [formGroupName]="i">
+        <h4>Address {{i + 1}}</h4>
+        <div>
+          <label for="street-{{i}}">Street:</label>
+          <input matInput id="street-{{i}}" formControlName="street">
+        </div>
+        <div>
+          <label for="city-{{i}}">City:</label>
+          <input matInput id="city-{{i}}" formControlName="city">
+        </div>
+        <div>
+          <label for="state-{{i}}">State:</label>
+          <input matInput id="state-{{i}}" formControlName="state">
+        </div>
+        <div>
+          <label for="zip-{{i}}">ZIP:</label>
+          <input matInput id="zip-{{i}}" formControlName="zip">
+        </div>
+      </div>
+    </div> -->
+    <button mat-flat-button color="primary" type="submit">Submit</button>
+  </form>
+  

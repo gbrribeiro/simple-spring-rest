@@ -1,0 +1,14 @@
+<body class="vw-100 h-100 d-flex justify-content-center ">
+    <mat-tab-group class="vw-100">
+        <mat-tab label="Cursos">
+            <div class="w-100" *ngFor="let course of courses">
+                <app-list-label [course]="course" [endpoint]="courseUrl" ></app-list-label>
+            </div>
+        </mat-tab>
+        <mat-tab label="Alunos">
+            <div class="w-100" *ngFor="let student of students">
+                <app-list-label [student]="student" [endpoint]="studentUrl"></app-list-label>
+            </div>
+        </mat-tab>
+    </mat-tab-group>      
+</body>

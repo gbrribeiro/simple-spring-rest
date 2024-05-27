@@ -1,0 +1,36 @@
+<mat-list-item role="listitem" class="vw-100 ">
+    <div *ngIf="student != null;then studentOn else courseOn">
+    </div>
+
+    <ng-template #studentOn>
+        <div class="w-100 d-flex flex-row justify-content-around">
+            <h6>
+                {{student?.name}} {{student?.lastName}} 
+            </h6>
+            <div>
+                <button mat-icon-button color="primary" (click)="edit()">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="danger" (click)="delete()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #courseOn>
+        <div class="w-100 d-flex flex-row justify-content-around">
+            <h6>
+                {{course?.name}}
+            </h6>
+            <div>
+                <button mat-icon-button color="primary">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="danger" (click)="delete()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</mat-list-item>

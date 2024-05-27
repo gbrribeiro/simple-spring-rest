@@ -1,0 +1,4 @@
+*.zip
+ng-client/.vscode
+ng-client/node_modules
+ng-client/.angular
